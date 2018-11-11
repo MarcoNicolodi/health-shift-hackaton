@@ -1,0 +1,192 @@
+<!doctype html>
+<html class="no-js" lang="">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title></title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <link rel="manifest" href="site.webmanifest">
+  <link rel="apple-touch-icon" href="icon.png">
+  <!-- Place favicon.ico in the root directory -->
+
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+</head>
+
+<body>
+  <!--[if lte IE 9]>
+    <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
+  <![endif]-->
+
+  <!-- Add your site or application content here -->
+  <nav class="navbar header-top fixed-top navbar-expand-lg  navbar-dark bg-dark">
+    <a class="navbar-brand" href="index.html">SAAU - Auto Atendimento</a>
+  </nav>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <ul class="nav nav-tabs" id="navegacao-auto-atendimento" role="tablist">
+          <li class="nav-item">
+            <a class="nav-link active" data-toggle="tab" role="tab" id="tab-identificacao" href="#identificacao"
+              aria-selected="true">Identificação</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" data-toggle="tab" role="tab" id="tab-sintomas" href="#sintomas" aria-selected="false">Sintomas</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" data-toggle="tab" role="tab" id="tab-refinamento" href="#refinamento" aria-selected="false">Refinamento</a>
+          </li>
+        </ul>
+        <div class="tab-content" id="navegacao-auto-atendimento-conteudo">
+          <div class="tab-pane fade show active" id="identificacao" role="tabpanel" aria-labelledby="tab-identificacao">
+              <div class="form-group">
+                <label for="cpf-codigo">CPF/Codigo</label>
+                <input type="text" class="form-control" name="cpf-codigo">
+              </div>
+              <div class="col-md-12">
+                <input type="button" class="btn btn-lg btn-primary botao-navegacao btn-block float-right" data-go-to="sintomas"
+                  value="Proximo">
+              </div>
+          </div>
+          <div class="tab-pane fade" id="sintomas" role="tabpanel" aria-labelledby="tab-sintomas">
+            <div class="row">
+              <div class="col-md-3 sintoma">
+                Febre
+              </div>
+              <div class="col-md-3 sintoma">
+                Nausea
+              </div>
+              <div class="col-md-3 sintoma">
+                Dor de cabeça
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-3 sintoma">
+                Vomito
+              </div>
+              <div class="col-md-3 sintoma">
+                Dor de garganta
+              </div>
+              <div class="col-md-3 sintoma">
+                Dores musculares
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-12">
+                <input type="button" class="btn btn-lg btn-primary btn-block botao-navegacao float-right" data-go-to="refinamento"
+                  value="Próximo">
+              </div>
+            </div>
+          </div>
+          <div class="tab-pane fade" id="refinamento" role="tabpanel" aria-labelledby="tab-refinamento">
+            <div class="row">
+              <h2>Dor de cabeça</h2>
+            </div>
+            <div class="row">
+              <h3> Qual seu grau de dor?</h3>
+            </div>
+            <div class="row">
+              <div class="col-md-2 grau-dor grau-dor-1">
+                <span>1</span>
+              </div>
+              <div class="col-md-2 grau-dor grau-dor-2">
+                <span>2</span>
+              </div>
+              <div class="col-md-2 grau-dor grau-dor-3">
+                <span>3</span>
+              </div>
+              <div class="col-md-2 grau-dor grau-dor-4">
+                <span>4</span>
+              </div>
+              <div class="col-md-2 grau-dor grau-dor-5">
+                <span>5</span>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-12">
+                <h3>Há quanto tempo está sentindo dor?</h3>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-2 duracao dor">
+                <span>1 dia</span>
+              </div>
+              <div class="col-md-2 duracao dor">
+                <span>2 dias</span>
+              </div>
+              <div class="col-md-2 duracao dor">
+                <span>3 a 6 dias</span>
+              </div>
+              <div class="col-md-2 duracao dor">
+                <span>1 semana</span>
+              </div>
+            </div>
+            <div class="row">
+              <p class="lead"><h2>Febre</h2></p>
+            </div>
+            <div class="row">
+              <h3> Quantos graus de febre</h3>
+            </div>
+            <div class="row">
+              <div class="col-md-6">
+                <input type="range" step="0.1" id="slider-febre" min="35" max="41" class="slider">
+              </div>
+              <div class="col-md-5">
+                <span id="valor-febre" class="lead"> </span>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-12">
+                <h3>Há quanto tempo está sentindo febre?</h3>
+                
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-2 duracao febre">
+                <span>1 dia</span>
+              </div>
+              <div class="col-md-2 duracao febre">
+                <span>2 dias</span>
+              </div>
+              <div class="col-md-2 duracao febre">
+                <span>3 a 6 dias</span>
+              </div>
+              <div class="col-md-2 duracao febre">
+                <span>1 semana</span>
+              </div>
+            </div>
+            <div class="row">
+              <a type="button" class="btn btn-lg btn-block btn-primary" href="concluido.html"> Concluir </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+  </div>
+  </div>
+
+
+
+  <script src="js/vendor/modernizr-3.6.0.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+    crossorigin="anonymous"></script>
+  <script>window.jQuery || document.write('<script src="js/vendor/jquery-3.3.1.min.js"><\/script>')</script>
+  <script src="js/plugins.js"></script>
+  <script src="js/vendor/bootstrap.min.js"></script>
+  <script src="js/main.js"></script>
+
+  <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
+  <script>
+    window.ga = function () { ga.q.push(arguments) }; ga.q = []; ga.l = +new Date;
+    ga('create', 'UA-XXXXX-Y', 'auto'); ga('send', 'pageview')
+  </script>
+  <script src="https://www.google-analytics.com/analytics.js" async defer></script>
+</body>
+
+</html>
